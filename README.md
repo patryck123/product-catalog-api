@@ -1,20 +1,32 @@
-# Product Catalog API
+# 🏷️ Product Catalog API
 
-Catálogo de produtos com especificações técnicas, imagens, avaliações e cálculo de rating médio. Busca por nome, marca, categoria e faixa de preço.
+Catálogo de produtos com sistema de avaliações, reviews e filtros por categoria.
 
-## Tecnologias
-Java 17 · Spring Boot 3.2 · Spring Data JPA · PostgreSQL · Maven · Swagger/OpenAPI
+## 📋 Sobre o Projeto
 
-## Funcionalidades
-- Catálogo completo com specs e imagens por produto
-- Sistema de avaliação com cálculo de média ponderada
-- Busca global por nome e marca
-- Filtros: categoria, marca, faixa de preço, rating mínimo
-- Ordenação por avaliação
+API de catálogo focada na experiência do consumidor. Além de listar produtos com suas características, permite que clientes deixem avaliações com nota e texto. O sistema calcula a média de estrelas e lista os produtos mais bem avaliados.
 
-## Como Executar
-```bash
-mvn spring-boot:run
-# Acesse: http://localhost:8102/swagger-ui.html
-```
-**Patryck Martins Langsdorff** — Java Back End Developer Junior | [LinkedIn](https://www.linkedin.com/in/patryck-martins-langsdorff)
+## ✨ Funcionalidades
+
+- ✅ Gerenciar catálogo de produtos
+- ✅ Organizar por categorias
+- ✅ Avaliações com nota (1-5) e comentário
+- ✅ Cálculo automático de média de estrelas
+- ✅ Listagem dos mais bem avaliados
+- ✅ Filtrar por categoria
+- ✅ Busca por nome
+- ✅ Produtos em destaque
+
+## 🔗 Endpoints
+
+| Método | Rota | Descrição |
+|--------|------|-----------|
+| GET/POST | `/api/catalog` | Listar / Cadastrar produto |
+| GET | `/api/catalog/top-rated` | Mais bem avaliados |
+| POST | `/api/catalog/{id}/reviews` | Adicionar avaliação |
+| GET | `/api/catalog/{id}/reviews` | Ver avaliações |
+| GET | `/api/catalog?category={id}` | Filtrar por categoria |
+
+## 🛠️ Tecnologias
+
+- Java 17 · Spring Boot 3.2 · PostgreSQL · Maven · Lombok
